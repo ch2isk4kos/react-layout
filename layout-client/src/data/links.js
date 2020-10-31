@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-export const routes = [
+export const links = [
   {
     id: 1,
     url: "/",
@@ -29,7 +29,7 @@ export const routes = [
   },
 ];
 
-export const links = [
+export const social = [
   {
     id: 1,
     url: "www.github.com/ch2isk4kos",
