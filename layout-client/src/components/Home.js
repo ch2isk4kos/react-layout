@@ -7,8 +7,11 @@ const Home = () => {
   return (
     <div className='Home'>
       <main>
-        <button>
-
+        <button className='side-toggle' onClick={openSide}>
+          <FaBars />
+        </button>
+        <button className='modal-btn' onClick={openModal}>
+          Show Modal
         </button>
       </main>
     </div>
