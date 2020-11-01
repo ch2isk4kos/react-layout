@@ -32,17 +32,17 @@ export const links = [
 export const social = [
   {
     id: 1,
-    url: "www.github.com/ch2isk4kos",
+    url: "https://www.github.com/ch2isk4kos",
     icon: <FaGithub />,
   },
   {
     id: 2,
-    url: "www.linkedin.com/in/chris-kakos",
+    url: "https://linkedin.com/in/chris-kakos",
     icon: <FaLinkedin />,
   },
   {
     id: 3,
-    url: "www.twitter.com/ch2isk4kos",
+    url: "https://twitter.com/ch2isk4kos",
     icon: <FaTwitter />,
   },
 ];
