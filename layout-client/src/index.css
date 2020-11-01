@@ -97,27 +97,13 @@ nav {
   padding: 1rem;
 }
 
-.toggle {
-  font-size: 1.5rem;
-  color: coral;
-  background: transparent;
-  border-color: transparent;
-  transition: all 0.3s linear;
-  cursor: pointer;
-}
-
-.toggle:hover {
-  color: darkorange;
-  transform: rotate(90deg);
-}
-
 .logo {
   height: 40px;
 }
 
 .links-container {
   height: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
   transition: all 0.3s linear;
 }
 
@@ -132,9 +118,10 @@ nav {
 }
 
 .links a:hover {
-  background: hsl(205, 86%, 81%);
+  background: lightgrey;
   color: coral;
   font-weight: bold;
+  font-size: 1.2rem;
   padding-left: 1.5rem;
 }
 
@@ -144,6 +131,20 @@ nav {
 
 .show-container {
   height: 10rem;
+}
+
+.toggle {
+  font-size: 1.5rem;
+  color: coral;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  color: darkorange;
+  transform: rotate(90deg);
 }
 
 @media screen and (min-width: 800px) {

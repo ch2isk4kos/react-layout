@@ -6,6 +6,7 @@ const Navigation = () => {
   const [ link, setLink ] = useState(false);
   const linkContainerRef = useRef(null);
   const linkRef = useRef(null);
+  
   const linkToggle = () => {
     setLink(!link);
   };
@@ -28,7 +29,7 @@ const Navigation = () => {
             <FaBars />
           </button>
         </div>
-        <div className='link-containter' ref={linkContainerRef}>
+        <div className='links-containter' ref={linkContainerRef}>
           <ul className='links' ref={linkRef}>
             {
               links.map(li => {
@@ -37,25 +38,23 @@ const Navigation = () => {
                   <li key={id}>
                     <a href={url}>{text}</a>
                   </li>
-                );
-              })
-            };
-          </ul>
-        </div>
-        <div className='social'>
-          <ul className='icons'>
-            {
-              social.map((i) => {
-                const { id, url, icon } = i;
-                return (
-                  <li key={id}>
-                    <a href={url}>{icon}</a>
-                  </li>
-                );
+                )
               })
             }
           </ul>
         </div>
+        <ul className='icons'>
+          {
+            social.map((i) => {
+              const { id, url, icon } = i;
+              return (
+                <li key={id}>
+                  <a href={url} rel="noreferrer" target='_blank'>{icon}</a>
+                </li>
+              )
+            })
+          }
+        </ul>
       </div>
     </nav>
   )
