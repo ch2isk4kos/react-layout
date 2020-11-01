@@ -9,7 +9,7 @@ const Sidebar = () => {
   return (
     <aside className={`${isSideOpen ? 'Sidebar show-sidebar' : 'Sidebar'}`}>
       <div className='sidebar-header'>
-        <img className='logo' src={''} alt='logo' />
+        <img className='side-logo' src={''} alt='logo' />
         <button className='close-btn' onClick={closeSide}>
           <FaTimes />
         </button>
@@ -32,7 +32,7 @@ const Sidebar = () => {
             const { id, url, icon } = li;
             return (
               <li key={id}>
-                <a href={url}>{icon}</a>
+                <a href={url} rel="noreferrer" target='_blank'>{icon}</a>
               </li>
             )
           })
