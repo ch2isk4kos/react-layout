@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 
-const ApplicationContext = React.createContext();
+const AppContext = React.createContext();
 
-const ApplicationProvider = ({ children }) => {
-  const [ isSideOpen, setIsSideOpen ] = useState(false);
+const AppProvider = ({ children }) => {
+  const [ isSideOpen, setIsSideOpen ]   = useState(false);
   const [ isModalOpen, setIsModalOpen ] = useState(false);
 
   const openSide = () => {
@@ -20,22 +20,22 @@ const ApplicationProvider = ({ children }) => {
   };
 
   return (
-    <ApplicationContext.Provider
+    <AppContext.Provider
       value={{
         isSideOpen,
         isModalOpen,
-        openSide,
-        closeSide,
         openModal,
         closeModal,
+        openSide,
+        closeSide,
       }}>
         { children }
-    </ApplicationContext.Provider>
+    </AppContext.Provider>
   );
 };
 
-export const useGlobalConext = () => {
-  return useContext(ApplicationContext);
+export const useGlobalContext = () => {
+  return useContext(AppContext);
 }
 
-export { ApplicationContext, ApplicationProvider };
+export { AppContext, AppProvider };
